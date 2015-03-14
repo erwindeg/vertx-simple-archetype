@@ -15,6 +15,7 @@ public class MainVerticle extends AbstractVerticle {
     
     @Override
     public void start() throws Exception {
-		vertx.createHttpServer(new HttpServerOptions().setPort(PORT)).requestHandler(req -> req.response().end("Hello World")).listen();
+        vertx.createHttpServer(new HttpServerOptions().setPort(PORT)).
+            requestHandler(req -> req.response().end("Hello World")).listen();
     }    
 }
